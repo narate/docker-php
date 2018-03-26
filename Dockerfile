@@ -25,6 +25,6 @@ RUN apk add --no-cache \
     && docker-php-ext-install -j"$(getconf _NPROCESSORS_ONLN)" gd
 
 RUN apk add --no-cache bzip2-dev gettext-dev imap-dev icu icu-dev libintl libxslt-dev libxml2-dev
-RUN docker-php-ext-install bz2 calendar exif gettext imap intl mysqli pdo_mysql shmop sockets sysvsem sysvshm wddx xsl opcache
+RUN docker-php-ext-install bz2 calendar exif gettext imap intl mysqli pdo_mysql shmop sockets sysvsem sysvshm wddx xsl opcache zip
 RUN rm -rf /tmp/* /var/cache/apk/*
 
