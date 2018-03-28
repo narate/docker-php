@@ -43,5 +43,12 @@ RUN cd /tmp && \
  	chown -R :www-data . && \
  	chmod u+x bin/magento
 
+RUN apk add --no-cache nginx && mkdir -p /run/nginx
 RUN rm -rf /tmp/* /var/cache/apk/*
+
+ADD ./start.sh /start.sh
+ADD ./nginx.conf /etc/nginx/nginx.conf
+
+CMD ["/start.sh"]
+
 
