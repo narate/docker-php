@@ -29,7 +29,6 @@ RUN cd /tmp && \
 	php composer-setup.php && \
 	php -r "unlink('composer-setup.php');"
 
-
 RUN mv /tmp/composer.phar /usr/bin/composer
 
 RUN cd /tmp && \
@@ -50,5 +49,4 @@ ADD ./start.sh /start.sh
 ADD ./nginx.conf /etc/nginx/nginx.conf
 
 CMD ["/start.sh"]
-
 
