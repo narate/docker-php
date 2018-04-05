@@ -1,4 +1,4 @@
-FROM php:7.1-fpm-alpine
+FROM php:7.0-fpm-alpine
 
 MAINTAINER Narate Ketram <rate@tel.co.th>
 
